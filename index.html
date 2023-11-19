@@ -30,7 +30,7 @@
 
     inputPane.addEventListener('input', function() {
       const text = inputPane.innerText.toLowerCase().replace(/[^\w\s]/g, ''); // Remove punctuation and convert to lowercase
-      const reversedText = text.reverse();
+      const reversedText = text.split('').reverse().join('');
       outputPane.innerText = reversedText;
     });
   </script>
