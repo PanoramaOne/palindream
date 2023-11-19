@@ -29,8 +29,8 @@
     const outputPane = document.getElementById('output-pane');
 
     inputPane.addEventListener('input', function() {
-      const text = inputPane.innerText;
-      const reversedText = text.split('').reverse().join('');
+      const text = inputPane.innerText.toLowerCase().replace(/[^\w\s]/g, ''); // Remove punctuation and convert to lowercase
+      const reversedText = text.reverse();
       outputPane.innerText = reversedText;
     });
   </script>
