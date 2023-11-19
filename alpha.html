@@ -1,1 +1,38 @@
-89359240
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reverse Echo App</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #input-pane, #output-pane {
+      flex: 1;
+      border: 1px solid #ccc;
+      padding: 20px;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+  <div id="input-pane" contenteditable="true" placeholder="Type here..."></div>
+  <div id="output-pane"></div>
+
+  <script>
+    // JavaScript logic for reversing the text
+    const inputPane = document.getElementById('input-pane');
+    const outputPane = document.getElementById('output-pane');
+
+    inputPane.addEventListener('input', function() {
+      const text = inputPane.innerText;
+      const reversedText = text.split('').reverse().join('');
+      outputPane.innerText = reversedText;
+    });
+  </script>
+</body>
+</html>
